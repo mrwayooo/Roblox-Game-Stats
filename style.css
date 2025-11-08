@@ -39,15 +39,19 @@ h1 {
 
 .play-btn {
   display: inline-block;
-  background-color: #00b06b;
-  color: white;
-  padding: 10px 15px;
   margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #e74c3c;
+  color: white;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.2s;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
 .play-btn:hover {
-  background-color: #00945a;
+  background-color: #c0392b;
+  transform: scale(1.05);
 }
+
+
