@@ -5,7 +5,7 @@ const game = {
   name: "[HALLOWEEN PART2🎃] Simple MiniGames",
   players: 0,
   visits: 22,
-  thumbnail: "images/game1.png"  // path รูปใน repo
+  thumbnail: "image/game1.png"  // path รูปใน repo
 };
 
 // แสดงผลบนหน้าเว็บ
