@@ -4,7 +4,7 @@ const gamesDiv = document.getElementById("games");
 
 async function fetchGame() {
   try {
-    const res = await fetch(`${proxyUrl}?universeIds=${universeId}`); // ✅ มี s
+    const res = await fetch(`${proxyUrl}?universeIds=${universeId}`);
     const data = await res.json();
 
     if (data.error) {
@@ -13,7 +13,7 @@ async function fetchGame() {
     }
 
     const game = data.data[0];
-    const thumbnailUrl = `https://www.roblox.com/thumbnail/asset?assetId=${game.rootPlaceId}&width=420&height=420&format=png`;
+    const thumbnailUrl = `https://thumbnails.roblox.com/v1/games/icons?universeIds=${universeId}&size=420x420&format=Png&isCircular=false`;
 
     gamesDiv.innerHTML = `
       <div class="game-card">
@@ -30,6 +30,5 @@ async function fetchGame() {
   }
 }
 
-// โหลดข้อมูลครั้งแรก + อัปเดตใหม่ทุก 10 วินาที
 fetchGame();
 setInterval(fetchGame, 10000);
